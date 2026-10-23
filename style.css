@@ -615,4 +615,20 @@ img{
     }
 }
 
-    
+    .flying-plane {
+    font-size: 35px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+    from {
+        left: -50px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
