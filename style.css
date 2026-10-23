@@ -394,7 +394,33 @@ height:400px;
     object-fit: contain;
     display: block;
 }
+.footer {
+    background-color: #f2f2f2;
+    padding: 30px;
+    color: #333;
+}
 
+.footer_sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer_sections h3 {
+    font-size: 16px;
+}
+.footer_sections p {
+    font-size: 14px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.footer_sections p:hover {
+    text-decoration: underline;
+}
+.footer_bottom {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+}
 .intrest_img img,.explore_card img, .iconic-places_img{
     transition: transform 0.3s ease;
 }
@@ -402,3 +428,191 @@ height:400px;
 .intrest_img img:hover,.explore_card img:hover,.iconic-places_img:hover {
     transform: scale(1.05);
 }
+.navbar__menu{
+    transition:transform 0.2s;
+}
+.navbar__menu:hover{
+
+    transform : scale(1);
+}
+/* RESPONSIVE CODE */
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+}
+/* Tablet screen */
+/* Tablet screens */
+@media screen and (max-width: 900px) {
+
+    .navbar,
+    .explore_container,
+    .iconic-places,
+    .footer_sections {
+        flex-wrap: wrap;
+    }
+
+    .experience-banner,
+    .donation_banner,
+    .award-banner {
+        margin: 20px;
+        gap: 20px;
+    }
+
+    .experience-banner_content h1,
+    .donation-banner_content h1 {
+        font-size: 35px;
+    }
+
+    .intrest_img {
+        height: 300px;
+    }
+
+    .explore_card,
+    .iconic-places_img,
+    .footer_sections > div {
+        width: 48%;
+    }
+}
+/* mobile responsive */
+@media screen and (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        padding: 10px 16px;
+        gap: 8px;
+    }
+
+    .navbar__logo h1 {
+        font-size: 20px;
+    }
+
+    .navbar__logo img,
+    .navbar__link img {
+        width: 26px;
+        height: 26px;
+    }
+    .navbar__menu{
+        display: none;
+    }
+      /* Banners */
+    .experience-banner,
+    .donation_banner,
+    .award-banner {
+        flex-direction: column;
+        margin: 16px;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .experience-banner_image,
+    .donation_banner_img,
+    .award-banner_content,
+    .award-image {
+        width: 100%;
+    }
+
+    .experience-banner_image img,
+    .donation_banner_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .experience-banner_divider,
+    .donation-banner_divider {
+        display: none;
+    }
+
+    .experience-banner_content h1,
+    .donation-banner_content h1 {
+        font-size: 32px;
+    }
+ /* Section headings */
+    .intrest,
+    .explore {
+        margin: 20px 16px;
+    }
+
+    .intrest h1,
+    .explore h1 {
+        font-size: 24px;
+    }
+
+    /* Interest cards */
+    .intrest_img,
+    .iconic-places {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin: 16px;
+        margin-bottom: 80px;
+    }
+
+    .intrest_card {
+        height: 180px;
+    }
+      /* Explore cards */
+    .explore_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .explore_card img {
+        width: 100%;
+        height: 200px;
+    object-fit: cover;
+    }
+    .explore_card {
+    width: 100%;
+}
+
+    /* Iconic places */
+    .iconic-places{
+        display: grid;
+          /* grid-template-columns: repeat(2, 1fr); */
+    gap: 10px;
+    margin: 16px;
+    }
+
+.iconic-places_img {
+    width: 100%;
+}
+    .iconic-places_img img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .iconic-places_name {
+        bottom: 8px;
+        left: 8px;
+    }
+      /* Award banner */
+    .award-banner_content h1 {
+        font-size: 40px;
+    }
+
+    .award-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 24px 16px;
+    }
+
+    .footer_sections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 16px;
+    }
+}
+
+    
